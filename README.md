@@ -13,7 +13,7 @@ cd client
 
 npm install
 
-npm run dev
+npm run serve
 
 tty1:
 
