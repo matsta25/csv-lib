@@ -14,6 +14,7 @@
 
 <script>
 import PostsService from '@/services/PostsService'
+
 export default {
   name: 'posts',
   data () {

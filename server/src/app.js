@@ -19,6 +19,13 @@ app.get('/posts', (req, res) => {
   )
 })
 
+app.post('/file', (req, res) => {
+    console.log('Recived file from frontend');
+    res.json({
+        status: 'backend revived file and send response to frontend'
+    })
+})
+
 app.listen(port, () => {
     console.log('Server is running on localhost:' + port)
 })
