@@ -1,49 +1,52 @@
 <template>
 <div>
-  <vue-dropzone
-  ref="myVueDropzone"
-  id="dropzone"
-  :options="dropzoneOptions"
-  @vdropzone-complete="afterComplete"
-  ></vue-dropzone>
-  <span>
-      {{ response.status }}
-  </span>
+  <fileupload 
+    name="recfile" 
+    target="http://localhost:8081/upload"  
+    action="POST" 
+    v-on:progress="progress" 
+    v-on:start="startUpload" 
+    v-on:finish="finishUpload">
+    </fileupload>
+    <hr>
+    {{res}}
 </div>
 </template>
 
 <script>
-import vue2Dropzone from 'vue2-dropzone'
-import PostsService from '@/services/PostsService'
-
-export default {
-  name: 'app',
-  components: {
-    vueDropzone: vue2Dropzone
+import FileUpload from 'vue-simple-upload/dist/FileUpload'
+  export default {
+    components: {
+    'fileupload': FileUpload
   },
-  data: function () {
-    return {
-      dropzoneOptions: {
-        url: 'http://httpbin.org/post',
-        thumbnailWidth: 150,
-        maxFilesize: 0.5,
-        headers: { 'Access-Control-Allow-Origin': '*' }
-      },
-      response: {
-        status: ''
+    data () {
+      return {
+        res: {
+          status: '',
+          data: {
+          }
+        }
       }
-    }
-  },
-
-  methods: {
-    afterComplete (file) {
-      console.log(file)
-      this.sendFile()
     },
-    async sendFile () {
-      const response = await PostsService.sendFile()
-      this.response = response.data
+    methods: {
+    startUpload(e) {
+      // file upload start event
+      console.log(e);
+    },
+    finishUpload(e) {
+      // file upload finish event
+      
+      console.log(e);
+      console.log(e.currentTarget.response);
+      this.res = JSON.parse(e.currentTarget.response).res;
+      console.log(this.res);
+      
+    },
+    progress(e) {
+      // file upload progress
+      // returns false if progress is not computable
+      console.log(e);
     }
   }
-}
+  }
 </script>
