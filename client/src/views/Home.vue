@@ -7,11 +7,16 @@
             <img alt="JPK logo" src="../assets/jpk-front.png">
           </div>
             <div class="input-section slide button">
-              <FormFile/>
+              <FormFile
+                @modalRun="modalRun"
+              />
             </div>
       </div>
   </div>
 
+  <b-modal v-model="modalShow">
+      {{this.value}}
+    </b-modal>
   </div>
 </template>
 
@@ -26,6 +31,12 @@ export default {
   components: {
     FormFile
   },
+  data () {
+      return {
+        modalShow: false,
+        value: ''
+      }
+    },
   mounted: function () {
     let scene = document.getElementById('scene')
     let parallaxInstance = new Parallax(scene, {
@@ -33,6 +44,12 @@ export default {
       calibrateX: true,
       calibrateY: true
     })
+  },
+  methods: {
+    modalRun(value) {
+      this.modalShow = !this.modalShow;
+      this.value = value;
+    }
   }
 }
 

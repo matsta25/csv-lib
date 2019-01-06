@@ -10,6 +10,7 @@
     </fileupload>
     <!-- <hr>
     {{res}} -->
+
 </div>
 </template>
 
@@ -40,6 +41,7 @@ import FileUpload from 'vue-simple-upload/dist/FileUpload'
       console.log(e.currentTarget.response);
       this.res = JSON.parse(e.currentTarget.response).res;
       console.log(this.res);
+      this.$emit('modalRun', this.res);
       
     },
     progress (e) {
