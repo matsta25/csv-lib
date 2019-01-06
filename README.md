@@ -103,7 +103,7 @@ and go to http://localhost:8080/
 ## Authors
 
 * **Mateusz Stańczak** - [matsta25](https://github.com/matsta25)
-* **Kacper Latoszewski** - [IgorKIX](https://github.com/dootirl)
+* **Kacper Latoszewski** - [dootirl](https://github.com/dootirl)
 
 See also the list of [contributors](https://github.com/matsta25/csv-lib/graphs/contributors) who participated in this project.
 
