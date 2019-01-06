@@ -1,6 +1,6 @@
 <template>
 <div>
-  <fileupload 
+  <fileupload
     name="recfile" 
     target="http://localhost:8081/upload"  
     action="POST" 

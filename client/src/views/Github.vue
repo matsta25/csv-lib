@@ -64,7 +64,6 @@ body{
 .inner {
   margin-left: auto;
   margin-right: auto;
-  width: 500px;
   /*whatever width you want*/
 }
 </style>

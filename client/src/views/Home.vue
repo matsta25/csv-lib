@@ -75,7 +75,7 @@ pointer-events: none ;
 
 .input-section{
   position: absolute !important;
-  left: calc(50% - 150px) !important;
+  left: calc(50% - 80px) !important;
   top: calc(50% + 200px) !important;
 }
 
