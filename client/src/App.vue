@@ -67,4 +67,7 @@ body{
   height: calc(100% - 56px);
   width: 100%;
 }
+#__BVID__7{
+  padding-left: 0 !important;
+}
 </style>
