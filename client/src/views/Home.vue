@@ -6,10 +6,9 @@
           <div class="slide img-front" data-depth="0.3">
             <img alt="JPK logo" src="../assets/jpk-front.png">
           </div>
-            <div class="input-section slide ">
+            <div class="input-section slide button">
               <FormFile/>
             </div>
-      
       </div>
   </div>
 
@@ -27,24 +26,23 @@ export default {
   components: {
     FormFile
   },
-  mounted: function() {
-    let scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene, {
+  mounted: function () {
+    let scene = document.getElementById('scene')
+    let parallaxInstance = new Parallax(scene, {
       relativeInput: true,
       calibrateX: true,
       calibrateY: true
-    });
+    })
   }
 }
 
-    
 </script>
 
 <style>
 
 #app{
   display: table;
-  height: 100%; 
+  height: 100%;
   width: 100%;
 }
 
@@ -54,7 +52,7 @@ vertical-align: middle;
 background: #bdc3c7;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to bottom, #4f5b69, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to bottom, #ffffff, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+pointer-events: none ;
 }
 
 #scene{
@@ -68,8 +66,7 @@ background: linear-gradient(to bottom, #ffffff, #bdc3c7); /* W3C, IE 10+/ Edge, 
 .img-back{
   left: calc(50% - 200px) !important;
   top: calc(50% - 200px) !important;
-  
-}
+  }
 
 .img-front{
   left: calc(50% - 200px) !important;
@@ -80,9 +77,15 @@ background: linear-gradient(to bottom, #ffffff, #bdc3c7); /* W3C, IE 10+/ Edge, 
   position: absolute !important;
   left: calc(50% - 150px) !important;
   top: calc(50% + 200px) !important;
-  z-index: 1000 !important;
+}
+
+[type="file"]{
+  display: inline;
+}
+
+.button{
+  z-index: 10 !important;
+  pointer-events: all;
 }
 
 </style>
-
-

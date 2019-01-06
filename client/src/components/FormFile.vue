@@ -1,7 +1,6 @@
 <template>
 <div>
   <fileupload 
-    class="fileupload"
     name="recfile" 
     target="http://localhost:8081/upload"  
     action="POST" 
@@ -43,15 +42,11 @@ import FileUpload from 'vue-simple-upload/dist/FileUpload'
       console.log(this.res);
       
     },
-    progress(e) {
+    progress (e) {
       // file upload progress
       // returns false if progress is not computable
-      console.log(e);
+      console.log(e)
     }
   }
-  }
+}
 </script>
-
-<style>
-</style>
-
