@@ -6,8 +6,7 @@
     <div id="contet">
     demo-gif
     <p>
-    This project has been to help see content of JPK/XML file.
-    </p><br>
+    This project has been to help see content of JPK/XML file.</p>
     You can check this repo on github 
     <a href="https://github.com/matsta25/csv-lib">HERE.</a> 
   </div>
@@ -65,7 +64,7 @@ body{
 .inner {
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  width: 500px;
   /*whatever width you want*/
 }
 </style>
