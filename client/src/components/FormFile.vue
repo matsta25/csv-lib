@@ -1,6 +1,7 @@
 <template>
 <div>
   <fileupload 
+    class="fileupload"
     name="recfile" 
     target="http://localhost:8081/upload"  
     action="POST" 
@@ -8,8 +9,8 @@
     v-on:start="startUpload" 
     v-on:finish="finishUpload">
     </fileupload>
-    <hr>
-    {{res}}
+    <!-- <hr>
+    {{res}} -->
 </div>
 </template>
 
@@ -50,3 +51,7 @@ import FileUpload from 'vue-simple-upload/dist/FileUpload'
   }
   }
 </script>
+
+<style>
+</style>
+

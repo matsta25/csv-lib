@@ -17,6 +17,8 @@ Vue.config.productionTip = false
 import TreeView from "vue-json-tree-view"
 Vue.use(TreeView)
 
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 new Vue({
   router,
