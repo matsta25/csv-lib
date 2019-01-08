@@ -25,6 +25,17 @@
             Download Excel
         
         </download-excel>
+        <download-excel
+            class   = "btn btn-default"
+            :data   = "json_data"
+            :fields = "json_fields"
+            name    = "ExcelJpk.xls"
+            type  = "csv"
+            >
+        
+            Download CSV
+        
+        </download-excel>
     </b-modal>
   </div>
 </template>
@@ -108,7 +119,8 @@ export default {
 
         let wartosc2 = b.innerHTML;
           let obj2 = {
-            wartosc2: klucz + ' - ' +  wartosc2
+            // wartosc2: klucz + '.' +  wartosc2
+            wartosc2: wartosc2
           };
         this.json_data.push(obj2)
         r1.appendChild(a);
@@ -175,6 +187,18 @@ pointer-events: none ;
 
 .table td{
   border: solid black 1px;
+}
+
+#__BVID__7___BV_modal_footer_{
+  display: none;
+}
+
+.btn{
+  margin: 0 15px !important;
+}
+
+#__BVID__7___BV_modal_header_{
+  display: none;
 }
 
 </style>
