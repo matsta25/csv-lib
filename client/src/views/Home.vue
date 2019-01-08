@@ -15,7 +15,16 @@
   </div>
 
   <b-modal v-model="modalShow">
-      {{this.value}}
+      <div id="table-content"></div>
+      <download-excel
+            class   = "btn btn-default"
+            :data   = "json_data"
+            :fields = "json_fields"
+            name    = "ExcelJpk.xls">
+        
+            Download Excel
+        
+        </download-excel>
     </b-modal>
   </div>
 </template>
@@ -34,7 +43,19 @@ export default {
   data () {
       return {
         modalShow: false,
-        value: ''
+        value: '',
+        json_fields: {
+            'JPK': 'wartosc2'
+        },
+        json_data: [],
+        json_meta: [
+            [
+                {
+                    'key': 'charset',
+                    'value': 'utf-8'
+                }
+            ]
+        ],
       }
     },
   mounted: function () {
@@ -43,12 +64,59 @@ export default {
       relativeInput: true,
       calibrateX: true,
       calibrateY: true
-    })
+    });
   },
   methods: {
     modalRun(value) {
       this.modalShow = !this.modalShow;
       this.value = value;
+
+      this.createTable(value);
+    },
+    createTable(o){
+      const f = function (o) { // funkcja splaszczajaca
+      const r = {};
+      for (const i in o)
+        if (i in o)
+          if (typeof o[i] === 'object') {
+            const s = f(o[i]);
+            for (const j in s) j in s && (r[i + '.' + j] = s[j]);
+          } else r[i] = o[i];
+      return r;
+    };
+
+    const t = document.createElement('table'); // inicjalizacja tablic i rzedow
+          
+
+
+    t.classList.add("table");
+
+    o = f(o);
+
+    for (const i in o) { // petla filtrujaca
+      if (i.match('data.tns:JPK.tns')) {  // reszta properties nie jest istotna
+        const r1 = document.createElement('tr');
+
+        t.appendChild(r1);
+        const a = document.createElement('td');
+        const b = document.createElement('td');
+        a.innerHTML = i.match(/.*:(.*)\.0$/) ? i.match(/.*:(.*)\.0$/)[1] : 'brak';
+        b.innerHTML = o[i];
+        let klucz = a.innerHTML;
+
+        console.log(a.innerHTML + ' - ' + b.innerHTML);
+
+        let wartosc2 = b.innerHTML;
+          let obj2 = {
+            wartosc2: klucz + ' - ' +  wartosc2
+          };
+        this.json_data.push(obj2)
+        r1.appendChild(a);
+        r1.appendChild(b);
+      }
+    }
+    document.querySelector('#table-content').appendChild(t);
+    
     }
   }
 }
@@ -103,6 +171,10 @@ pointer-events: none ;
 .button{
   z-index: 10 !important;
   pointer-events: all;
+}
+
+.table td{
+  border: solid black 1px;
 }
 
 </style>

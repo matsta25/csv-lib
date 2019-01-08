@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><tns:JPK xmlns:etd="http://crd.gov.pl/xml/schematy/dziedzinowe/mf/2016/01/25/eD/DefinicjeTypy/" xmlns:tns="http://jpk.mf.gov.pl/wzor/2017/11/13/1113/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <tns:Naglowek>
+    <tns:KodFormularza kodSystemowy="JPK_VAT (3)" wersjaSchemy="1-1">JPK_VAT</tns:KodFormularza>
+    <tns:WariantFormularza>3</tns:WariantFormularza>
+    <tns:CelZlozenia>0</tns:CelZlozenia>
+    <tns:DataWytworzeniaJPK>2018-02-12T11:37:24.000Z</tns:DataWytworzeniaJPK>
+    <tns:DataOd>2018-01-01</tns:DataOd>
+    <tns:DataDo>2018-01-31</tns:DataDo>
+    <tns:NazwaSystemu>fillUp Przyjazne formularze</tns:NazwaSystemu>
+  </tns:Naglowek>
+  <tns:Podmiot1>
+    <tns:NIP>1111111111</tns:NIP>
+    <tns:PelnaNazwa>ABCDF sp. z o.o.</tns:PelnaNazwa>
+    <tns:Email>bartek@mail.pl</tns:Email>
+  </tns:Podmiot1>
+  <tns:SprzedazWiersz>
+    <tns:LpSprzedazy>1</tns:LpSprzedazy>
+    <tns:NrKontrahenta>2222222222</tns:NrKontrahenta>
+    <tns:NazwaKontrahenta>Janowska s.p. z o.o.</tns:NazwaKontrahenta>
+    <tns:AdresKontrahenta>WARSZAWA 00-672, ul. Piękna 2</tns:AdresKontrahenta>
+    <tns:DowodSprzedazy>111/2018</tns:DowodSprzedazy>
+    <tns:DataWystawienia>2018-01-03</tns:DataWystawienia>
+    <tns:DataSprzedazy>2018-01-03</tns:DataSprzedazy>
+    <tns:K_19>100.78</tns:K_19>
+    <tns:K_20>23.18</tns:K_20>
+  </tns:SprzedazWiersz>
+  <tns:SprzedazWiersz>
+    <tns:LpSprzedazy>2</tns:LpSprzedazy>
+    <tns:NrKontrahenta>3333333333</tns:NrKontrahenta>
+    <tns:NazwaKontrahenta>Bartosz Nowak</tns:NazwaKontrahenta>
+    <tns:AdresKontrahenta>WARSZAWA 00-672, ul. Piękna 1</tns:AdresKontrahenta>
+    <tns:DowodSprzedazy>222/2018</tns:DowodSprzedazy>
+    <tns:DataWystawienia>2018-01-05</tns:DataWystawienia>
+    <tns:DataSprzedazy>2018-01-05</tns:DataSprzedazy>
+    <tns:K_19>100.78</tns:K_19>
+    <tns:K_20>23.18</tns:K_20>
+  </tns:SprzedazWiersz>
+  <tns:SprzedazCtrl>
+    <tns:LiczbaWierszySprzedazy>2</tns:LiczbaWierszySprzedazy>
+    <tns:PodatekNalezny>46.36</tns:PodatekNalezny>
+  </tns:SprzedazCtrl>
+  <tns:ZakupWiersz>
+    <tns:LpZakupu>1</tns:LpZakupu>
+    <tns:NrDostawcy>9999999999</tns:NrDostawcy>
+    <tns:NazwaDostawcy>Andrzej Kowalski</tns:NazwaDostawcy>
+    <tns:AdresDostawcy>WARSZAWA 00-672, ul. Piękna 3</tns:AdresDostawcy>
+    <tns:DowodZakupu>100/2018</tns:DowodZakupu>
+    <tns:DataZakupu>2018-01-05</tns:DataZakupu>
+    <tns:DataWplywu>2018-01-05</tns:DataWplywu>
+    <tns:K_45>80.25</tns:K_45>
+    <tns:K_46>18.46</tns:K_46>
+  </tns:ZakupWiersz>
+  <tns:ZakupWiersz>
+    <tns:LpZakupu>2</tns:LpZakupu>
+    <tns:NrDostawcy>8888888888</tns:NrDostawcy>
+    <tns:NazwaDostawcy>Burst S.A.</tns:NazwaDostawcy>
+    <tns:AdresDostawcy>WARSZAWA 00-672, ul. Piękna 4</tns:AdresDostawcy>
+    <tns:DowodZakupu>200/2018</tns:DowodZakupu>
+    <tns:DataZakupu>2018-01-07</tns:DataZakupu>
+    <tns:DataWplywu>2018-01-07</tns:DataWplywu>
+    <tns:K_45>80.25</tns:K_45>
+    <tns:K_46>18.46</tns:K_46>
+  </tns:ZakupWiersz>
+  <tns:ZakupCtrl>
+    <tns:LiczbaWierszyZakupow>2</tns:LiczbaWierszyZakupow>
+    <tns:PodatekNaliczony>36.92</tns:PodatekNaliczony>
+  </tns:ZakupCtrl>
+</tns:JPK>

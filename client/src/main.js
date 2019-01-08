@@ -20,6 +20,10 @@ Vue.use(TreeView)
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import JsonExcel from 'vue-json-excel'
+ 
+Vue.component('downloadExcel', JsonExcel)
+
 new Vue({
   router,
   render: h => h(App)

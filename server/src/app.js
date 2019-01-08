@@ -17,6 +17,9 @@ var upload = multer({ dest: 'upload/'});
 var fs = require('fs');
 var type = upload.single('file');
 let xml2js = require('xml2js');
+
+var router = require('koa-router')();
+
 app.get('/posts', (req, res) => {
   res.send(
     [{
@@ -57,6 +60,8 @@ app.post('/upload', type, (req, res) => {
     }); 
   });
 })
+
+
 
 app.listen(port, () => {
     console.log('Server is running on localhost:' + port)
