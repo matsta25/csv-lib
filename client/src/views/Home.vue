@@ -194,7 +194,10 @@ pointer-events: none ;
 }
 
 .btn{
-  margin: 0 15px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
 }
 
 #__BVID__7___BV_modal_header_{
