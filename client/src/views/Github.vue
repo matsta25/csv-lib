@@ -4,7 +4,8 @@
   <div class="middle">
     <div class="inner">
     <div id="contet">
-    <img src="http://github.com/matsta25/csv-lib/blob/master/csvGif.gif" alt="alt tag" style="max-width:100%;">
+    <img src="../../../csvGif.gif" alt="alt tag" style="max-width:50%;">
+    <br>
     <p>
     This project has been to help see content of JPK/XML file.</p>
     You can check this repo on github 
