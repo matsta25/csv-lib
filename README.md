@@ -4,7 +4,7 @@ IN PROGRESS
 
 DEMO GIF:
 
-<!-- <img src="https://github.com/matsta25/em-chat/blob/master/e-m_demogif.gif" alt="alt tag" style="max-width:100%;"> -->
+<img src="https://github.com/matsta25/csv-lib/blob/master/csvGif.gif" alt="alt tag" style="max-width:100%;">
 
 Based on VueCli on front and NodeJs as backend.
 
